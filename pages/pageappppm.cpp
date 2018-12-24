@@ -75,6 +75,8 @@ void PageAppPpm::setVesc(VescInterface *vesc)
         ui->generalTab->addRowSeparator(tr("Reverse behavior for ""Current"" Control"));
         ui->generalTab->addParamRow(mVesc->appConfig(), "app_ppm_conf.max_erpm_for_dir_active");
         ui->generalTab->addParamRow(mVesc->appConfig(), "app_ppm_conf.max_erpm_for_dir");
+        ui->generalTab->addRowSeparator(tr("Transmission"));
+        ui->generalTab->addParamRow(mVesc->appConfig(), "app_transmission_conf.switch_erpm");
 
         ui->mappingTab->addParamRow(mVesc->appConfig(), "app_ppm_conf.pulse_start");
         ui->mappingTab->addParamRow(mVesc->appConfig(), "app_ppm_conf.pulse_end");

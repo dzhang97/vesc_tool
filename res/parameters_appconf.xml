@@ -127,6 +127,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>ADC</enumNames>
             <enumNames>UART</enumNames>
             <enumNames>PPM and UART</enumNames>
+	    <enumNames>PPM and Transmission</enumNames>
             <enumNames>ADC and UART</enumNames>
             <enumNames>Nunchuk (I2C, Nyko Kama)</enumNames>
             <enumNames>NRF</enumNames>
@@ -1586,6 +1587,26 @@ p, li { white-space: pre-wrap; }
             <cDefine>APPCONF_NRF_SEND_CRC_ACK</cDefine>
             <valInt>1</valInt>
         </app_nrf_conf.send_crc_ack>
+        <app_transmission_conf.switch_erpm>
+            <longName>Switch ERPM</longName>
+            <type>2</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ERPM where the motor switch winding type.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPTRANSMISSION_SWITCH_ERPM</cDefine>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxInt>200000</maxInt>
+            <minInt>0</minInt>
+            <showDisplay>0</showDisplay>
+            <stepInt>1</stepInt>
+            <valInt>150000</valInt>
+            <suffix></suffix>
+            <vTx>1</vTx>
+        </app_transmission_conf.switch_erpm>
     </Params>
     <SerOrder>
         <ser>controller_id</ser>
@@ -1663,5 +1684,6 @@ p, li { white-space: pre-wrap; }
         <ser>app_adc_conf.tc_offset</ser>
         <ser>app_chuk_conf.tc_offset</ser>
         <ser>app_chuk_conf.buttons_mirrored</ser>
+        <ser>app_transmission_conf.switch_erpm</ser>
     </SerOrder>
 </ConfigParams>
